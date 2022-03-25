@@ -40,26 +40,30 @@ const TrainForm = () => {
         </div>
       </div>
       <div>
+          <h3>Protection Goods</h3>
         <div>
           <input type="radio" id="NN" name="drone" value="1" />
-          <label for="huey">Explosion</label>
+          <label for="huey">Shiping</label>
         </div>
         <div>
           <input type="radio" id="RF" name="drone" value="2" />
-          <label for="huey">Corrosion</label>
+          <label for="huey">Flaura/Fauna</label>
         </div>
         <div>
           <input type="radio" id="RF" name="drone" value="3" />
-          <label for="huey">Corrosion</label>
+          <label for="huey">Drivers</label>
         </div>
         <div>
           <input type="radio" id="RF" name="drone" value="4" />
-          <label for="huey">Corrosion</label>
+          <label for="huey">Tourism</label>
         </div>
         <div>
           <input type="radio" id="RF" name="drone" value="5" />
-          <label for="huey">Corrosion</label>
+          <label for="huey">Fishers</label>
         </div>
+      </div>
+      <div>
+          <input type='submit' placeholder="Train" name="Train"/>
       </div>
     </form>
   );

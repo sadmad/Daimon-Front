@@ -1,13 +1,15 @@
 import TrainForm from "./TrainForm";
-import './Train.css'
+import "./Train.css";
 
 const Train = () => {
+  return (
+    <div className="train">
+      <h2>Train The Data</h2>
+      <div>
+        <TrainForm />
+      </div>
+    </div>
+  );
+};
 
-    return(
-        <div className="train">
-            <TrainForm />
-        </div>
-    )
-}
-
-export default Train;   
+export default Train;
