@@ -21,6 +21,8 @@ const Login = () => {
   const resultIllustrator = (resultOfLogin) => {
     const loginData = resultOfLogin;
     if (loginData.status === 200) {
+      sessionStorage.setItem('tok', loginData.token);
+      sessionStorage.setItem('login', 200);
       setIsLogedIn(true);
     } else if (loginData.status === 422) {
       setlogInStatus(loginData.message);

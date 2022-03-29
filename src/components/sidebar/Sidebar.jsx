@@ -14,13 +14,13 @@ const Sidebar = () => {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Functionality</h3>
           <ul className="sidebarList">
-            <Link to='/'>
+            <Link className="link" to='/'>   
               <li className="sidebarListItem">
                 <LoginIcon className="sidebarIcon" />
                 Log In
               </li>
             </Link>
-            <Link to="/training">
+            <Link className="link" to="/training">
               <li className="sidebarListItem">
                 <ModelTrainingIcon className="sidebarIcon" /> Train
               </li>

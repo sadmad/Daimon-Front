@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Train from './pages/train/Train';
 
 function App() {
+  console.log('tocken: ', sessionStorage.getItem('tok'));
   return (
     <Router>
       <Topbar />

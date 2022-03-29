@@ -34,6 +34,7 @@
     align-items: center;
     border-radius: 10px;
     color: rgb(104, 100, 100);
+   
     
 }
 .sidebarListItem.active,
@@ -44,4 +45,8 @@
 .sidebarIcon{
     margin-right: 9px;
     font-size: 20px !important;
+}
+
+link {
+    text-decoration: none !important;
 }
