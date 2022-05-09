@@ -11,12 +11,14 @@ function App() {
   return (
     <Router>
       <Topbar />
-      <div className="container-local">
+      <div className="row">
         <Sidebar />
+        <div class="col-sm-10">
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/training" element={<Train /> } />
         </Routes>
+        </div>
       </div>
     </Router>
   );

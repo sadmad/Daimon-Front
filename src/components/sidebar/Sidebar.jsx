@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-    <div className="sidebar">
+    <div className="sidebar col-sm-2">
       <div className="sidebarWrapper">
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Functionality</h3>

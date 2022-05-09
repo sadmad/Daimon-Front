@@ -30,7 +30,8 @@ const Form = (props) => {
         <label>
           Email
           <input
-            type="text"
+            type="email"
+            id="colFormLabel"
             placeholder="Email"
             name="email"
             onChange={(e) => setEmail(e.target.value)}
@@ -40,12 +41,13 @@ const Form = (props) => {
           Password
           <input
             type="password"
+            id="colFormLabel"
             placeholder="Password"
             name="pass"
             onChange={(p) => setPass(p.target.value)}
           />
         </label>
-        <input className="formButton" type="submit" value="Log In" />
+        <bottom className="btn btn-primary btn-lg btn-block" type="submit" value="Log In" >Login</bottom>
       </form>
       )}
       

@@ -1,28 +1,28 @@
 @media all and (min-width: 480px) {
   .Login {
-    padding: 60px 0;
-    flex: 4;
+   padding: 6.5rem 0 ;
+  
   }
 
   .Login form {
     margin: 0 auto;
     max-width: 320px;
+    
   }
 }
 
 .TUCLogo {
-  flex: 2;
   align-items: center;
-  display: flex;
-  width: 400px;
-  padding: 50px;
+  margin: 0 auto;
+  width: 340px;
+  padding-bottom: 1rem;
+
 }
 
 .logoContainer {
-  display: flex;
-  flex: 1;
+
   align-items: center;
-  width: 500px;
+  width: 355px;
   margin: auto;
 }
 
@@ -32,17 +32,18 @@
 }
 
 .formContainer label {
-  color: rgb(114, 228, 120);
+  color: rgb(126, 126, 126);
   display: block;
   padding: 5px;
 }
 .formContainer input {
   display: block;
   padding: 5px;
+  color:rgb(105, 98, 98)
 }
 .formButton {
   display: flex;
-  flex: 1;
+
 }
 
 .loged-in {
