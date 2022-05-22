@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Button } from "react-bootstrap";
 import './Form.css';
 
 const Form = (props) => {
@@ -47,7 +48,7 @@ const Form = (props) => {
             onChange={(p) => setPass(p.target.value)}
           />
         </label>
-        <bottom className="btn btn-primary btn-lg btn-block" type="submit" value="Log In" >Login</bottom>
+        <Button className="btn btn-primary btn-lg btn-block" type="submit" value="Log In" >Login</Button>
       </form>
       )}
       

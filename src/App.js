@@ -13,7 +13,7 @@ function App() {
       <Topbar />
       <div className="row">
         <Sidebar />
-        <div class="col-sm-10">
+        <div className="col-sm-10">
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/training" element={<Train /> } />
