@@ -15,15 +15,15 @@ const Login = () => {
   //   const responce = await fetch("http://localhost:5000/login", requestOptions);
   //   const data = await responce.json();
   // }
-  const [isLogedIn, setIsLogedIn] = useState(false);
+  //const [isLogedIn, setIsLogedIn] = useState(false);
   const [logInStatus, setlogInStatus] = useState("");
 
   const resultIllustrator = (resultOfLogin) => {
     const loginData = resultOfLogin;
     if (loginData.status === 200) {
       sessionStorage.setItem("tok", loginData.token);
-      sessionStorage.setItem("login", 200);
-      setIsLogedIn(true);
+      sessionStorage.setItem("login", true);
+      //setIsLogedIn(true);
     } else if (loginData.status === 422) {
       setlogInStatus(loginData.message);
     }
@@ -40,7 +40,7 @@ const Login = () => {
             src="https://www.presse.tu-clausthal.de/fileadmin/_processed_/c/3/csm_Logo_EN_gr%C3%BCn_404735dda6.jpg"
           />
         </div>
-        {isLogedIn ? (
+        {sessionStorage.getItem('login') ? (
           <div className="loged-in">Your log in was successful!</div>
         ) : logInStatus ? (
           <div className="formContainer">
