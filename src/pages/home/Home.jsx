@@ -1,3 +1,5 @@
+import React, { Component } from "react";
+
 const Home = () => {
     return(
         <div>
@@ -11,7 +13,7 @@ const Home = () => {
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+              <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide" />
               <div class="container">
                 <div class="carousel-caption text-left">
                   <h1>Example headline.</h1>
@@ -21,7 +23,7 @@ const Home = () => {
               </div>
             </div>
             <div class="carousel-item">
-              <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+              <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide" />
               <div class="container">
                 <div class="carousel-caption">
                   <h1>Another example headline.</h1>
@@ -31,7 +33,7 @@ const Home = () => {
               </div>
             </div>
             <div class="carousel-item">
-              <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+              <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide" />
               <div class="container">
                 <div class="carousel-caption text-right">
                   <h1>One more for good measure.</h1>
@@ -50,6 +52,7 @@ const Home = () => {
             <span class="sr-only">Next</span>
           </a>
         </div>
+        </main>
         </div>
 
     );

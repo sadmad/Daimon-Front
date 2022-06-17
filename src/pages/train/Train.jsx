@@ -1,5 +1,6 @@
 import TrainForm from "./TrainForm";
 import "./Train.css";
+import React, { Component }  from 'react';
 
 const Train = () => {
   return (

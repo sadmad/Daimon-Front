@@ -6,6 +6,7 @@ import BiotechIcon from "@mui/icons-material/Biotech";
 import FilePresentIcon from "@mui/icons-material/FilePresent";
 import AssignmentTurnedInIcon from "@mui/icons-material/AssignmentTurnedIn";
 import { Link } from "react-router-dom";
+import React, { Component }  from 'react';
 
 const Sidebar = () => {
   return (

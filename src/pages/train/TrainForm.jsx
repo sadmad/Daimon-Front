@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./TrainForm.css";
+import React, { Component }  from 'react';
 
 const TrainhtmlForm = () => {
   const [isTrained, setIsTrained] = useState(false);

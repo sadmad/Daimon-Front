@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 import './Form.css';
+import React, { Component }  from 'react';
 
 const Form = (props) => {
   const [email, setEmail] = useState("");
