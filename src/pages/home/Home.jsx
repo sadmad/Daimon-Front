@@ -1,61 +1,73 @@
-import React, { Component } from "react";
+import Carousel from "react-bootstrap/Carousel";
+import Slide from "./slides/Slide";
+import Nav from "./topbar/Nav";
+import Blocks from "./fist-containers/Twoblock"
+import ReactDOM from "react-dom";
+import "./Home.css";
 
 const Home = () => {
-    return(
-        <div>
-        <main role="main">
+  let img = [
+    "https://images.pexels.com/photos/1456268/pexels-photo-1456268.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/196667/pexels-photo-196667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/847483/pexels-photo-847483.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+  ];
+  return (
+    <>
+      <main className="p-3 mb-2 bg-dark text-white w-100 p-3 mw-100">
+        <Nav />
+        <Slide />
+        <Blocks/>
 
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide" />
-              <div class="container">
-                <div class="carousel-caption text-left">
-                  <h1>Example headline.</h1>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-                </div>
-              </div>
+        <div className="container d-flex align-items-center justify-content-center position-relative flex-wrap">
+          <div className="card d-flex position-relative flex-column">
+            <div className="imgContainer">
+              <img src={img[0]}></img>
             </div>
-            <div class="carousel-item">
-              <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide" />
-              <div class="container">
-                <div class="carousel-caption">
-                  <h1>Another example headline.</h1>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide" />
-              <div class="container">
-                <div class="carousel-caption text-right">
-                  <h1>One more for good measure.</h1>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-                </div>
-              </div>
+            <div className="content">
+              <h2>Card One</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse eget velit tristique, sollicitudin leo viverra,
+                suscipit neque. Aliquam ut facilisis urna, in pretium nibh.
+                Morbi in leo in eros commodo volutpat ac sed dolor.
+              </p>
             </div>
           </div>
-          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+          <div className="card d-flex position-relative flex-column">
+            <div className="imgContainer">
+              <img src={img[1]}></img>
+            </div>
+            <div className="content">
+              <h2>Card Two</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse eget velit tristique, sollicitudin leo viverra,
+                suscipit neque. Aliquam ut facilisis urna, in pretium nibh.
+                Morbi in leo in eros commodo volutpat ac sed dolor.
+              </p>
+            </div>
+          </div>
+          <div className="card d-flex position-relative flex-column">
+            <div className="imgContainer">
+              <img src={img[2]}></img>
+            </div>
+            <div className="content">
+              <h2>Card Three</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse eget velit tristique, sollicitudin leo viverra,
+                suscipit neque. Aliquam ut facilisis urna, in pretium nibh.
+                Morbi in leo in eros commodo volutpat ac sed dolor.
+              </p>
+            </div>
+          </div>
         </div>
-        </main>
-        </div>
-
-    );
+      </main>
+      <footer className="pt-3 mt-4 text-muted border-top">
+        &copy; TU Cluasthal 2022
+      </footer>
+    </>
+  );
 };
 
 export default Home;
