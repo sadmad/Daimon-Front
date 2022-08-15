@@ -1,38 +1,62 @@
-import './Login.css';
+import "./Login.css";
+import Logo from '../../../images/Logo-white.png'
 
 const Login = () => {
-
-    return(
-        <div className="row align-items-md-stretch mt-4">
-          <div className="col-md-6 ">
-            <div className="h-100 p-5 text-white bg-dark rounded-3 border border-1">
-              <h2>Change the background</h2>
-              <p>
-                Swap the background-color utility and add a `.text-*` color
-                utility to mix up the jumbotron look. Then, mix and match with
-                additional component themes and more.
-              </p>
-              <button className="btn btn-outline-light" type="button">
-                Example button
-              </button>
-            </div>
-          </div>
-          <div className="col-md-6">
-            <div className="h-100 p-5 bg-light border rounded-3 text-dark">
-              <h2>Add borders</h2>
-              <p>
-                Or, keep it light and add a border for some added definition to
-                the boundaries of your content. Be sure to look under the hood
-                at the source HTML here as we've adjusted the alignment and
-                sizing of both column's content for equal-height.
-              </p>
-              <button className="btn btn-outline-secondary" type="button">
-                Example button
-              </button>
+  return (
+    <>
+      <div className="container">
+        <div className="d-flex justify-content-center align-items-center flex-wrap">
+          <div className="form-card">
+            <div className="card">
+              <div className="card-head bg-white">
+                <div className="d-flex align-items-center justify-content-center my-2">
+                  <div className="login-logo">
+                    <img
+                      src='https://www.presse.tu-clausthal.de/fileadmin/_processed_/c/3/csm_Logo_EN_gr%C3%BCn_404735dda6.jpg'
+                      alt=""
+                    />
+ 
+                  </div>
+                </div>
+              </div>
+              <div className="card-form">
+                <p className="text-center text-muted fs-08 mt-3">
+                  With you registered Email
+                </p>
+                <div className="d-flex align-items-center input-field">
+                  <span className="far fa-envelope text-muted"></span>
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    className="form-control"
+                    required
+                  />
+                </div>
+                <div className="d-flex align-items-center input-field">
+                  <span className="fas fa-key text-muted"></span>
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    className="form-control"
+                    required
+                  />
+                </div>
+                <div className="d-flex align-items-center">
+                  <input type="checkbox" name="remember" id="remember" />
+                  <label className="text-muted ms-2" for="remember">
+                    Remember me
+                  </label>
+                </div>
+                <div className="d-flex justify-content-center">
+                  <div class="btn btn-primary mt-3">Sign In</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-    )
-}
+      </div>
+    </>
+  );
+};
 
 export default Login;

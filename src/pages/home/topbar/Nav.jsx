@@ -1,6 +1,6 @@
 import logo from "../../../images/Logo-white.png";
 
-const Nav = () => {
+const Nav = (props) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <a className="navbar-brand" href="#">
@@ -26,7 +26,7 @@ const Nav = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="#" onClick={props.formDisplay}>
                 Login
               </a>
             </li>
