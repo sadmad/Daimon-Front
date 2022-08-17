@@ -39,6 +39,7 @@ const Home = () => {
         //set the pupup
         {showLogin ? <Login formDisplay={loginFormIlustrator}></Login> : ""}
       </main>
+      
       <footer className="pt-3 mt-4 text-muted border-top">
         &copy; TU Cluasthal 2022
       </footer>
