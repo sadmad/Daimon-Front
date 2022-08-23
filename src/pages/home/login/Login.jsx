@@ -40,6 +40,8 @@ const Login = (props) => {
 
     resultIllustrator(result);
     setIsLoading(false);
+    //reload the page if the login is successful and reload the page to
+    //see the dashboard
     window.location.reload();
   };
   return (
