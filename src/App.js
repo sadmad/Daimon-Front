@@ -7,6 +7,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Train from "./pages/train/Train";
 import React, { Component } from "react";
+import Dashboard from "./pages/dashboard/Dashboard";
+import Test from './pages/test/Test'
 
 function App() {
   console.log("status: ", sessionStorage.getItem("login"));
@@ -22,8 +24,9 @@ function App() {
             <Sidebar />
             <div className="col-sm-10">
               <Routes>
-                <Route path="/" element={<Login />} />
-                <Route path="/training" element={<Train />} />
+                <Route exact path="/" element={<Dashboard />} />
+                <Route path="/training" element={<Train />} component={Train}/>
+                <Route path="/testing" element={<Test />} component={Test}/>
               </Routes>
             </div>
           </div>

@@ -1,57 +1,60 @@
 import SidebarMenu from "react-bootstrap-sidebar-menu";
-import LoginIcon from "@mui/icons-material/Login";
-import ModelTrainingIcon from "@mui/icons-material/ModelTraining";
-import StorageIcon from "@mui/icons-material/Storage";
-import BiotechIcon from "@mui/icons-material/Biotech";
-import FilePresentIcon from "@mui/icons-material/FilePresent";
-import AssignmentTurnedInIcon from "@mui/icons-material/AssignmentTurnedIn";
 import { Link } from "react-router-dom";
 import React, { Component } from "react";
+import {
+  CDBSidebar,
+  CDBSidebarContent,
+  CDBSidebarFooter,
+  CDBSidebarHeader,
+  CDBSidebarMenu,
+  CDBSidebarMenuItem,
+} from "cdbreact";
+import { NavLink } from "react-router-dom";
+import './Sidebar.css';
 
 
 const Sidebar = () => {
   return (
     <>
-      <SidebarMenu>
-  <SidebarMenu.Header>
-    <SidebarMenu.Brand>
-      {/* Your brand icon */}
-    </SidebarMenu.Brand>
-    <SidebarMenu.Toggle />
-  </SidebarMenu.Header>
-  <SidebarMenu.Body>
-    <SidebarMenu.Nav>
-      <SidebarMenu.Nav.Link>
-        <SidebarMenu.Nav.Icon>
-          {/* Menu item icon */}
-        </SidebarMenu.Nav.Icon>
-        <SidebarMenu.Nav.Title>
-          {/* Menu item title */}
-        </SidebarMenu.Nav.Title>
-      </SidebarMenu.Nav.Link>
-    <SidebarMenu.Nav/>
-    <SidebarMenu.Sub>
-      <SidebarMenu.Sub.Toggle>
-        <SidebarMenu.Nav.Icon />
-        <SidebarMenu.Nav.Title>
-          {/* Submenu title */}
-        </SidebarMenu.Nav.Title>
-      </SidebarMenu.Sub.Toggle>
-      <SidebarMenu.Sub.Collapse>
-        <SidebarMenu.Nav>
-          <SidebarMenu.Nav.Link>
-            <SidebarMenu.Nav.Icon>
-              {/* Submenu item icon */}
-            </SidebarMenu.Nav.Icon>
-            <SidebarMenu.Nav.Title>
-              {/* Submenu item title */}
-            </SidebarMenu.Nav.Title>
-          </SidebarMenu.Nav.Link>
-        </SidebarMenu.Nav>
-      </SidebarMenu.Sub.Collapse>
-    </SidebarMenu.Sub>
-  <SidebarMenu.Body/>
-</SidebarMenu>
+      <div className='sidebar col-sm-2'style={{ display: 'flex', height: '100vh', overflow: 'scroll initial' }}>
+      <CDBSidebar textColor="#fff" backgroundColor="#333">
+        <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
+          <a href="/" className="text-decoration-none" style={{ color: 'inherit' }}>
+            Functions
+          </a>
+        </CDBSidebarHeader>
+
+        <CDBSidebarContent className="sidebar-content">
+          <CDBSidebarMenu>
+          <NavLink exact to="/" activeclassname="activeClicked">
+              <CDBSidebarMenuItem icon="home">Dashboard</CDBSidebarMenuItem>
+            </NavLink>
+            <NavLink exact to="/training" activeclassname="activeClicked">
+              <CDBSidebarMenuItem icon="sitemap">Train</CDBSidebarMenuItem>
+            </NavLink>
+            <NavLink exact to="/testing" activeclassname="activeClicked">
+              <CDBSidebarMenuItem icon="chart-bar">Evaluation</CDBSidebarMenuItem>
+            </NavLink>
+            <NavLink exact to="/profile" activeclassname="activeClicked">
+              <CDBSidebarMenuItem icon="hdd">Backup</CDBSidebarMenuItem>
+            </NavLink>
+            <NavLink exact to="/analytics" activeclassname="activeClicked">
+              <CDBSidebarMenuItem icon="database">Logs</CDBSidebarMenuItem>
+            </NavLink>
+          </CDBSidebarMenu>
+        </CDBSidebarContent>
+
+        <CDBSidebarFooter style={{ textAlign: 'center' }}>
+          <div
+            style={{
+              padding: '20px 5px',
+            }}
+          >
+             &copy; TU Cluasthal 2022
+          </div>
+        </CDBSidebarFooter>
+      </CDBSidebar>
+    </div>
       {/* 
     <div className="sidebar col-sm-2">
       <div className="sidebarWrapper">
