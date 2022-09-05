@@ -1,9 +1,8 @@
-import Carousel from "react-bootstrap/Carousel";
+
 import Slide from "./slides/Slide";
 import TopBar from "./topbar/TopBar";
 import Blocks from "./fist-containers/Twoblock";
 import SecBlocks from "./3block/secBlock";
-import ReactDOM from "react-dom";
 import "./Home.css";
 import Login from "./login/Login";
 import { useState } from "react";
@@ -20,7 +19,7 @@ const Home = () => {
   };
 
   //the login form with popup after 6 seconds
-  const [timedPopup, setTimedPopup] = useState(false);
+ 
   useEffect(() => {
     setTimeout(() => {
       setDisplayForm(true);
@@ -34,9 +33,9 @@ const Home = () => {
         <Slide />
         <Blocks />
         <SecBlocks />
+        {/* formDisplay pass the loginFormIlustrator function to the cilde
+        set the pupup */}
 
-        //formDisplay pass the loginFormIlustrator function to the cild
-        //set the pupup
         {showLogin ? <Login formDisplay={loginFormIlustrator}></Login> : ""}
       </main>
       
