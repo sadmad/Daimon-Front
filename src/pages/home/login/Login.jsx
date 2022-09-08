@@ -19,7 +19,7 @@ const Login = (props) => {
     } else if (loginData.status === 422) {
       setlogInStatus(loginData.message);
     }
-    console.log(logInStatus);
+    //console.log(logInStatus);
   };
 
   const submitHandler = async (event) => {

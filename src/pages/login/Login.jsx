@@ -27,7 +27,7 @@ const Login = () => {
     } else if (loginData.status === 422) {
       setlogInStatus(loginData.message);
     }
-    console.log(logInStatus);
+    
   };
 
   return (

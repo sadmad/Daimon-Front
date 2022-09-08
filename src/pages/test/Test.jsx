@@ -6,10 +6,10 @@ const Test = () => {
   const [showAvg, setShow] = useState(false);
   const [averages, setAverage] = useState([]);
   const [data, setResults] = useState('');
-  
-  if (averages.status === 200) {
-    setResults(averages.results[0])
-  }
+  const [actionId, setActionId] = useState();
+  const [protectionGoodsId, setGoodsId] = useState();
+
+  //if(averages.status===200) console.log(actionId, ' ', protectionGoodsId);
 
   return (
     <main role="main" className="dashboard flex">
@@ -22,11 +22,11 @@ const Test = () => {
             <>
               <div>
                 <p>some text</p>
-                <TestForm allAvgs={data}/>
+                <TestForm allAvgs={averages} action_id={actionId} protection_good={protectionGoodsId}/>
               </div>
             </>
           ) : (
-            <GetDataForm showFunc={setShow} getAverages={setAverage} />
+            <GetDataForm getGoodsId={setGoodsId} setRes={setResults} showFunc={setShow} getAverages={setAverage} getActionId={setActionId}/>
           )}
         </div>
       </div>

@@ -28,7 +28,7 @@ const TrainhtmlForm = () => {
     });
     result = await result.json();
     setIsTrained(false);
-    console.log(result);
+    //console.log(result);
   };
   return (
     <div className="form-group">
