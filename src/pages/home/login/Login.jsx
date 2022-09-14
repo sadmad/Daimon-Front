@@ -50,7 +50,7 @@ const Login = (props) => {
         <div className="fixed-top justify-top-right">
           <button
             type="button"
-            class="btn-close btn-close-white d-flex"
+            className="btn-close btn-close-white d-flex"
             aria-label="Close"
             onClick={props.formDisplay}
           ></button>
@@ -114,7 +114,7 @@ const Login = (props) => {
                     </label>
                   </div>
                   <div className="d-flex justify-content-center">
-                    <div class="btn btn-primary mt-3" onClick={submitHandler}>
+                    <div className="btn btn-primary mt-3" onClick={submitHandler}>
                       Sign In
                     </div>
                   </div>
