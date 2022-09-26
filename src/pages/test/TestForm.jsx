@@ -62,7 +62,8 @@ const TestForm = (props) => {
     console.log(result);
     
     };
-
+  
+    
   const avg = props.allAvgs.results[0];
   return (
     <>
