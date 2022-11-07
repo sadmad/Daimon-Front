@@ -1,11 +1,13 @@
-import { useState } from "react";
 import "./TrainForm.css";
+import { useState } from "react";
+import ReactLaoding from "react-loading";
 
-const TrainhtmlForm = () => {
+const TrainhtmlForm = (props) => {
   const [isTrained, setIsTrained] = useState(false);
   const [model, setModel] = useState("");
   const [field, setField] = useState("");
   const [goods, setGoods] = useState("");
+
   const user_id = 2;
   const token = sessionStorage.getItem("tok");
 
@@ -29,8 +31,21 @@ const TrainhtmlForm = () => {
     result = await result.json();
     setIsTrained(false);
     console.log(result);
+    props.trained(true);
   };
-  return (
+  return isTrained ? (
+    <div className="load">
+      <ReactLaoding
+        className="react-loading"
+        type={"spinningBubbles"}
+        color={"gray"}
+      />
+      <br />
+      <div className="block-text-load">
+        <span className="load-text">Login</span>
+      </div>
+    </div>
+  ) : (
     <div className="form-group">
       <form onSubmit={trainHandler}>
         <div className="model">
